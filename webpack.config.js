@@ -51,10 +51,6 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new ManifestPlugin(),
         new CopyWebpackPlugin([{
-            from: 'src/favicon',
-            to: 'favicon'
-        }]),
-        new CopyWebpackPlugin([{
             from: 'src/static',
             to: 'static'
         }]),
