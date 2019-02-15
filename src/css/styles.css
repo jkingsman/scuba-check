@@ -1,0 +1,246 @@
+/* 
+ * FONTS
+ */
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Thin), url("../static/font/roboto/Roboto-Thin.eot");
+    src: url("../static/font/roboto/Roboto-Thin.eot?#iefix") format("embedded-opentype"),
+        url("../static/font/roboto/Roboto-Thin.woff2") format("woff2"),
+        url("../static/font/roboto/Roboto-Thin.woff") format("woff"),
+        url("../static/font/roboto/Roboto-Thin.ttf") format("truetype");
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Light), url("../static/font/roboto/Roboto-Light.eot");
+    src: url("../static/font/roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"),
+        url("../static/font/roboto/Roboto-Light.woff2") format("woff2"),
+        url("../static/font/roboto/Roboto-Light.woff") format("woff"),
+        url("../static/font/roboto/Roboto-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Regular), url("../static/font/roboto/Roboto-Regular.eot");
+    src: url("../static/font/roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+        url("../static/font/roboto/Roboto-Regular.woff2") format("woff2"),
+        url("../static/font/roboto/Roboto-Regular.woff") format("woff"),
+        url("../static/font/roboto/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../static/font/roboto/Roboto-Medium.eot");
+    src: url("../static/font/roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"),
+        url("../static/font/roboto/Roboto-Medium.woff2") format("woff2"),
+        url("../static/font/roboto/Roboto-Medium.woff") format("woff"),
+        url("../static/font/roboto/Roboto-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../static/font/roboto/Roboto-Bold.eot");
+    src: url("../static/font/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"),
+        url("../static/font/roboto/Roboto-Bold.woff2") format("woff2"),
+        url("../static/font/roboto/Roboto-Bold.woff") format("woff"),
+        url("../static/font/roboto/Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* 
+ * CORE STYLES
+ */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-bottom: 280px;
+    /* Margin bottom by footer height */
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400 !important;
+    font-family: "Roboto", sans-serif !important;
+}
+
+h1,
+.h1 {
+    font-size: 1.5rem !important;
+}
+
+h2,
+.h2 {
+    font-size: 1.25rem !important;
+}
+
+h3,
+.h3 {
+    font-size: 1rem !important;
+}
+
+a {
+    color: #0065b1 !important;
+}
+
+input[type="radio"] {
+    margin-right: 7px;
+}
+
+input[disabled] {
+    background-color: #d3d3d3;
+}
+
+/* 
+ * PRINT FULL WIDTH
+ */
+
+@media print {
+    @page {
+        margin: 1in;
+    }
+    .container {
+        max-width: 100% !important;
+    }
+    .footer {
+        display: none !important;
+    }
+}
+
+/* 
+ * RESPONSIVENESS
+ */
+
+@media (max-width: 768px) {
+    .tagline {
+        display: none;
+        margin-bottom: 0px;
+    }
+    #share-buttons img,
+    #share-buttons svg {
+        width: 35px;
+        padding: 5px;
+        border: 0;
+        box-shadow: 0;
+        display: inline;
+    }
+    .alert {
+        padding: 0 !important;
+    }
+
+    body {
+        padding-bottom: 350px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .pad-left {
+        margin-left: 25px;
+    }
+
+    .text-label {
+        min-width: 180px;
+    }
+}
+
+#searchBar {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#share-buttons img,
+#share-buttons svg {
+    width: 45px;
+    padding: 5px;
+    border: 0;
+    box-shadow: 0;
+    display: inline;
+}
+
+/* 
+ * CARDS AND INPUTS
+ */
+
+.pell-button {
+    width: 40px !important;
+}
+
+.card {
+    margin-top: 2px;
+    break-inside: avoid;
+}
+
+.card-header {
+    padding: 0;
+}
+
+.calc-input-width {
+    width: 100px;
+}
+
+.calc-tiny-input-width {
+    width: 30px;
+}
+
+.card-header,
+.card-header:focus {
+    padding: 0.5rem 0.75rem !important;
+    cursor: pointer;
+    outline: 0;
+}
+
+.group-header {
+    padding-top: 25px;
+}
+
+.equationTrigger {
+    cursor: pointer;
+}
+
+/* 
+ * FOOTER
+ */
+
+.footer-text {
+    color: #333e48;
+    text-align: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    min-height: 60px;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.footerLogo[data-src] {
+    /* don't display defered images until loaded */
+    display: none;
+}
+
+.footerLogo {
+    margin-top: 10px;
+    max-width: 200px;
+}
