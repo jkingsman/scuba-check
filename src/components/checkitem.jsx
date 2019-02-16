@@ -1,12 +1,7 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export default class CheckItem extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-
     render() {
         let nextBtn = null;
         if (this.props.itemsRemaining > 0) {
@@ -18,13 +13,13 @@ export default class CheckItem extends React.Component {
                 >
                     GO
                 </button>
-            )
+            );
         }
 
         return (
             <div className="questionContainer">
                 <div className="questionItem">
-                    <h3 className="prompt">{this.props.message}</h3>
+                    <h3 className="prompt">{this.props.item.prompt}</h3>
                     {nextBtn}
                 </div>
             </div>
@@ -33,7 +28,7 @@ export default class CheckItem extends React.Component {
 }
 
 CheckItem.propTypes = {
-    message: PropTypes.string.isRequired,
+    item: PropTypes.string.isRequired,
     onNext: PropTypes.func.isRequired,
     itemsRemaining: PropTypes.number.isRequired,
-}
+};
