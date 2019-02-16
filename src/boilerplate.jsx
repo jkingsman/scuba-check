@@ -7,6 +7,7 @@ export default class Boilerplate extends React.Component {
         super(props);
         let checks = [
             "Boots, wetsuit on.",
+            "Primary tank straps tight and straight",
             "Primary tank full on",
             "BCD inflates",
             "BCD butt dump tightened and secure",
@@ -49,7 +50,6 @@ export default class Boilerplate extends React.Component {
             "Slate secure and erased",
             "Deco plan on slate, if applicable",
             "Deploy longhose",
-            "Perform valve drill",
             "Stow key, stash phone, don gloves, bring fins. Dive safe."
         ]
 
