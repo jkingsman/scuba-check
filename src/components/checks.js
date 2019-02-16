@@ -52,7 +52,7 @@ const checks = [
         checkType: CHECKTYPES.GONOGO,
     },
     {
-        prompt: "Weights balanced appropriately for pony tanks",
+        prompt: "Weights balanced for ponies",
         category: "Weights",
         checkType: CHECKTYPES.GONOGO,
     },
@@ -104,7 +104,7 @@ const checks = [
         checkType: CHECKTYPES.GONOGO,
     },
     {
-        prompt: "Pony 1 regulator stowed tightly on correct side",
+        prompt: "Pony 1 regulator stowed tightly",
         category: "Air (Pony 1)",
         checkType: CHECKTYPES.GONOGO,
     },
@@ -135,7 +135,7 @@ const checks = [
         checkType: CHECKTYPES.GONOGO,
     },
     {
-        prompt: "Pony 2 regulator stowed tightly on correct side",
+        prompt: "Pony 2 regulator stowed tightly",
         category: "Air (Pony 2)",
         checkType: CHECKTYPES.GONOGO,
     },
@@ -146,12 +146,12 @@ const checks = [
     },
     {
         prompt: "Pony 1 on left side",
-        category: "Releases",
+        category: "Releases (Pony 1)",
         checkType: CHECKTYPES.GONOGO,
     },
     {
         prompt: "Pony 2 on right side",
-        category: "Releases",
+        category: "Releases (Pony 2)",
         checkType: CHECKTYPES.GONOGO,
     },
     {
@@ -185,12 +185,12 @@ const checks = [
         checkType: CHECKTYPES.CHECKSTOW,
     },
     {
-        prompt: "Primary computer powers on and is secure",
+        prompt: "Primary computer powers on, is secure",
         category: "Gear",
         checkType: CHECKTYPES.GONOGO,
     },
     {
-        prompt: "Backup computer powers on and is secure",
+        prompt: "Backup computer powers on, is secure",
         category: "Gear",
         checkType: CHECKTYPES.GONOGO,
     },
@@ -225,9 +225,9 @@ const checks = [
         checkType: CHECKTYPES.CHECKSTOW,
     },
     {
-        prompt: "Stow key, stash phone, don gloves, bring fins. Dive safe.",
-        category: "Go Dive",
-        checkType: CHECKTYPES.GONOGO,
+        prompt: "Stow key, stash phone, don gloves, bring fins. Dive safe!",
+        category: "Go Dive!",
+        checkType: CHECKTYPES.FINAL,
     },
 ];
 

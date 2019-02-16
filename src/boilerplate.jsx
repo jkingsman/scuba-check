@@ -22,18 +22,25 @@ export default class Boilerplate extends React.Component {
         });
     }
 
-    nextItem() {
+    nextItem(result) {
+        let checks = this.state.checks;
+        checks[this.state.currentCheck].result = result;
+
+        this.setState({checks});
         this.setItem(this.state.currentCheck + 1);
     }
 
     skipCategory() {
         let currentCategory = this.state.checks[this.state.currentCheck].category;
         let currentIdx = this.state.currentCheck;
+        let checks = this.state.checks;
 
         while (this.state.checks[currentIdx].category === currentCategory) {
+            checks[currentIdx].result = "Skipped ⚠️";
             currentIdx++;
         }
 
+        this.setState({checks})
         this.setItem(currentIdx);
     }
 
@@ -47,9 +54,9 @@ export default class Boilerplate extends React.Component {
                     skipCategoryFunc={this.skipCategory}
                 />
                 <CheckItem
+                    checks={this.state.checks}
                     item={this.state.checks[this.state.currentCheck]}
                     onNext={this.nextItem}
-                    itemsRemaining={this.state.checks.length - this.state.currentCheck - 1}
                 />
             </div>
         );

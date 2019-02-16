@@ -78,7 +78,7 @@ a {
 
 .questionContainer {
     width: 100%;
-    height: 100%;
+    height: 90vh;
     padding: 0;
     margin: 0;
     display: flex;
@@ -116,4 +116,12 @@ a {
 
 .masterContainer {
     height: 100vh;
+}
+
+.checkResult {
+    float: right;
+}
+
+.finalContainer {
+    margin: 0 10px 0 10px;
 }

@@ -3,16 +3,32 @@ import PropTypes from "prop-types";
 
 export default class StatusBar extends React.Component {
     render() {
+        let skipBtn;
+        if (this.props.onItem < this.props.totalItems - 1) {
+            skipBtn = (
+                <span>
+                    (
+                    <a
+                        href="#"
+                        onClick={this.props.skipCategoryFunc}
+                    >
+                        Skip
+                    </a>
+                    )
+                </span>
+            );
+        }
+
+        let progress;
+        if (this.props.onItem + 1 < this.props.totalItems) {
+            progress = (<span>{this.props.onItem + 1} / {this.props.totalItems}</span>);
+        }
+
         return (
             <div className="statusBar">
-                <strong>{this.props.category}</strong> (<a
-                    href="#"
-                    onClick={this.props.skipCategoryFunc}
-                >
-                    Skip
-                </a>)
+                <strong>{this.props.category}</strong> {skipBtn}
                 <br />
-                {this.props.onItem + 1} / {this.props.totalItems}
+                {progress}
             </div>
         );
     }
