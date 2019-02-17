@@ -26,6 +26,7 @@
         "copy-webpack-plugin": "^4.5.1",
         "css-loader": "^0.28.11",
         "dayjs": "^1.5.16",
+        "dom-to-image": "^2.6.0",
         "eslint": "^4.19.1",
         "eslint-config-standard-jsx": "^5.0.0",
         "eslint-loader": "^2.0.0",

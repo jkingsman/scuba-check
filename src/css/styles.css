@@ -124,4 +124,9 @@ a {
 
 .finalContainer {
     margin: 0 10px 0 10px;
+    background: white;
+}
+
+.lastPage {
+    background: white;
 }
